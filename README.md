@@ -101,9 +101,68 @@ Configured the basic Service Desk structure, including **departments, help topic
 
 # Phase 3 — Incident Management
 
-The next phase will demonstrate realistic Level 1 support scenarios using the configured environment.
+Phase 3 demonstrates realistic **Level 1 IT Service Desk incident management** using the configured osTicket environment.
 
-Planned incidents include:
+Each incident follows a structured Service Desk workflow:
+
+**Ticket Creation → Categorization → Prioritization → Investigation → Troubleshooting → Resolution → Verification → Closure**
+
+---
+
+## 🎫 Ticket 01 — Microsoft 365 Login Issue
+
+**User:** Taylor Morgan
+**Category:** Account & Access / Authentication
+**Priority:** High
+**Status:** Closed
+
+### Incident
+
+Taylor Morgan reported being unable to sign in to their Microsoft 365 account and access Outlook and Microsoft Teams.
+
+### Troubleshooting
+
+The incident was investigated using a structured first-line troubleshooting approach. Account authentication and access were reviewed, the issue was addressed, and access was successfully restored.
+
+### Resolution
+
+Microsoft 365 account access was restored and successfully verified. The user was informed that Outlook and Microsoft Teams access were working again.
+
+### Ticket Evidence
+
+**01 — User / Ticket Submission**
+
+![Ticket 01 Submission](tickets/ticket-01-microsoft-365-login/01-ticket-submission.png)
+
+**02 — Ticket Details**
+
+![Ticket 01 Details](tickets/ticket-01-microsoft-365-login/02-ticket-details.png)
+
+**03 — Internal Troubleshooting**
+
+![Ticket 01 Internal Note](tickets/ticket-01-microsoft-365-login/03-internal-troubleshooting.png)
+
+**04 — Customer Communication**
+
+![Ticket 01 Customer Reply](tickets/ticket-01-microsoft-365-login/04-customer-communication.png)
+
+**05 — Resolution**
+
+![Ticket 01 Resolution](tickets/ticket-01-microsoft-365-login/05-resolution.png)
+
+**06 — Ticket Closed**
+
+![Ticket 01 Closed](tickets/ticket-01-microsoft-365-login/06-ticket-closed.png)
+
+### Ticket 01 Result
+
+Successfully created, categorized, prioritized, investigated, documented, resolved, and closed a simulated Microsoft 365 authentication incident while maintaining professional ticket documentation and user communication.
+
+---
+
+## 🔜 Upcoming Incidents
+
+Additional incidents will be added to demonstrate a broader range of Level 1 troubleshooting skills:
 
 | Incident                    | Support Area     |
 | --------------------------- | ---------------- |
@@ -118,11 +177,6 @@ Planned incidents include:
 | MFA / Login Issue           | Authentication   |
 | Hardware / Peripheral Issue | Hardware         |
 
-Each incident will demonstrate:
-
-**Ticket Creation → Categorization → Prioritization → Investigation → Troubleshooting → Resolution → Verification → Closure**
-
----
 
 # 🔎 Troubleshooting Approach
 
