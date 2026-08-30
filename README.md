@@ -1,241 +1,109 @@
 # 🎫 IT Service Desk Incident Management Lab
 
-### osTicket · Docker · MariaDB · Windows 11 · PowerShell
+**osTicket · Docker · MariaDB · Windows 11 · PowerShell · GitHub**
 
-A hands-on **IT Service Desk lab** built to demonstrate practical Level 1 IT support skills using a self-hosted osTicket environment.
+A hands-on IT Service Desk homelab designed to demonstrate practical **Level 1 IT Support and incident management skills** using a self-hosted osTicket environment.
 
-The project simulates a real Service Desk workflow — from receiving and categorizing incidents to troubleshooting, documenting resolutions, verifying fixes, and closing tickets.
-
-> **Identify → Investigate → Troubleshoot → Resolve → Verify → Document**
-
----
-
-## 🎯 Objectives
-
-* Build and configure a functional Service Desk environment
-* Deploy osTicket using Docker and Docker Compose
-* Configure a MariaDB backend
-* Manage support tickets and user requests
-* Practice incident prioritization and categorization
-* Document troubleshooting and resolutions
-* Demonstrate escalation and professional user communication
-
----
-
-## 🛠️ Lab Environment
-
-| Component                   | Configuration                   |
-| --------------------------- | ------------------------------- |
-| Host OS                     | Windows 11                      |
-| Ticketing System            | osTicket 1.18.4                 |
-| Deployment                  | Docker Desktop / Docker Compose |
-| Database                    | MariaDB 10.11                   |
-| Linux Environment           | WSL 2 / Ubuntu                  |
-| Scripting & Troubleshooting | PowerShell                      |
-| Version Control             | Git / GitHub                    |
-
----
-
-## 🏗️ Environment Setup
-
-### Docker
-
-Docker Desktop was installed on the Windows 11 host and configured with the WSL 2 backend.
-
-Docker functionality was verified using the Docker `hello-world` container.
-
-### osTicket
-
-The Service Desk environment was deployed using Docker Compose with:
-
-* osTicket 1.18.4
-* MariaDB 10.11
-* Docker networking
-* Persistent storage volumes
-* Application-to-database connectivity
-* Local port mapping on `8080`
-
-The deployed Service Desk is accessible through the local web interface.
-
-### Service Desk
-
-**Environment:** Rikit IT Service Desk
-
-The environment provides the foundation for creating users, managing incidents, assigning priorities, documenting troubleshooting, and closing tickets.
-
----
-
-# 📸 Setup Evidence# 🎫 IT Service Desk Incident Management Lab
-
-### osTicket · Docker · MariaDB · Windows 11 · PowerShell
-
-A hands-on **IT Service Desk lab** built to demonstrate practical Level 1 IT support skills using a self-hosted osTicket environment.
-
-The project simulates a real Service Desk workflow — from receiving and categorizing incidents to troubleshooting, documenting resolutions, verifying fixes, and closing tickets.
+The project simulates a real Service Desk workflow:
 
 > **Identify → Investigate → Troubleshoot → Resolve → Verify → Document**
 
 ---
 
-## 🎯 Objectives
+## 🎯 Project Objectives
 
-* Build and configure a functional Service Desk environment
-* Deploy osTicket using Docker and Docker Compose
-* Configure a MariaDB backend
-* Configure departments, teams, agents, and users
-* Manage support tickets and user requests
-* Practice incident prioritization and categorization
-* Document troubleshooting and resolutions
-* Demonstrate escalation and professional user communication
+* Deploy and configure a functional osTicket Service Desk
+* Configure departments, help topics, teams, agents, and users
+* Simulate realistic IT support incidents
+* Practice ticket triage, prioritization, troubleshooting, and documentation
+* Demonstrate professional user communication and ticket closure
+* Document the environment and workflow using GitHub
 
 ---
 
 ## 🛠️ Lab Environment
 
-| Component                   | Configuration                   |
-| --------------------------- | ------------------------------- |
-| Host OS                     | Windows 11                      |
-| Ticketing System            | osTicket 1.18.4                 |
-| Deployment                  | Docker Desktop / Docker Compose |
-| Database                    | MariaDB 10.11                   |
-| Linux Environment           | WSL 2 / Ubuntu                  |
-| Scripting & Troubleshooting | PowerShell                      |
-| Version Control             | Git / GitHub                    |
+| Component         | Technology              |
+| ----------------- | ----------------------- |
+| Host OS           | Windows 11              |
+| Ticketing System  | osTicket 1.18.4         |
+| Deployment        | Docker / Docker Compose |
+| Database          | MariaDB 10.11           |
+| Linux Environment | WSL 2 / Ubuntu          |
+| Scripting         | PowerShell              |
+| Version Control   | Git / GitHub            |
 
 ---
 
-## 🏗️ Environment Setup
+# Phase 1 — Environment Setup
 
-### Docker
+Built the underlying Service Desk environment using Docker and Docker Compose.
 
-Docker Desktop was installed on the Windows 11 host and configured with the WSL 2 backend.
+### Setup Evidence
 
-Docker functionality was verified using the Docker `hello-world` container.
-
-### osTicket
-
-The Service Desk environment was deployed using Docker Compose with:
-
-* osTicket 1.18.4
-* MariaDB 10.11
-* Docker networking
-* Persistent storage volumes
-* Application-to-database connectivity
-* Local port mapping on `8080`
-
-The deployed Service Desk is accessible through the local web interface.
-
-### Service Desk
-
-**Environment:** Rikit IT Service Desk
-
-The environment provides the foundation for creating users, managing incidents, assigning priorities, documenting troubleshooting, and closing tickets.
-
----
-
-# 📸 Phase 1 — Setup Evidence
-
-### 01 — Docker Environment
-
-Docker installation and version verification on Windows 11.
+**01 — Docker Version**
 
 ![Docker Version](screenshots/setup/01-docker-version.png)
 
-### 02 — Docker Verification
-
-Docker functionality verified using the `hello-world` container.
+**02 — Docker Hello World**
 
 ![Docker Hello World](screenshots/setup/02-docker-hello-world.png)
 
-### 03 — Docker Compose Configuration
+**03 — Docker Compose Configuration**
 
-Docker Compose configuration used to define the osTicket and MariaDB services.
+![Docker Compose](screenshots/setup/03-docker-compose-configuration.png)
 
-![Docker Compose Configuration](screenshots/setup/03-docker-compose-configuration.png)
+**04 — Running Containers**
 
-### 04 — Running Containers
+![Containers Running](screenshots/setup/04-containers-running.png)
 
-The osTicket application and MariaDB database containers running successfully.
+**05 — osTicket Service Desk**
 
-![Running Containers](screenshots/setup/04-containers-running.png)
+![osTicket](screenshots/setup/05-osticket-dashboard.png)
 
-### 05 — osTicket Service Desk
+### Phase 1 Result
 
-Successfully accessed the deployed osTicket Service Desk through the local web interface.
-
-![osTicket Dashboard](screenshots/setup/05-osticket-dashboard.png)
+Successfully deployed a local osTicket environment with MariaDB using Docker Compose and verified application availability through the web interface.
 
 ---
 
-# ⚙️ Phase 2 — osTicket Configuration
+# Phase 2 — osTicket Configuration
 
-Configured the osTicket environment to simulate an organizational IT Service Desk.
+Configured the Service Desk structure required for realistic incident management.
 
-### 06 — Admin System Settings
+### Configuration Evidence
 
-Configured and verified the osTicket administrative environment.
+**06 — Admin System Settings**
 
 ![Admin System Settings](screenshots/admin-config/06-admin-system-settings.png)
 
-### 07 — Departments
-
-Configured departments to organize support requests and ticket routing.
+**07 — Departments**
 
 ![Departments](screenshots/admin-config/07-departments-configured.png)
 
-### 08 — Help Topics
-
-Configured help topics for common IT support requests.
+**08 — Help Topics**
 
 ![Help Topics](screenshots/admin-config/08-help-topics-configured.png)
 
-### 09 — Level I IT Support Team
+**09 — Level I IT Support Team**
 
-Configured the Level I IT Support team for first-line ticket handling.
+![IT Support Team](screenshots/admin-config/09-it-support-team.png)
 
-![Level I IT Support Team](screenshots/admin-config/09-it-support-team.png)
-
-### 10 — Test User
-
-Created a simulated customer account for use in the incident management scenarios.
+**10 — Test User**
 
 ![Test User](screenshots/admin-config/10-test-user-created.png)
 
----
+### Phase 2 Result
 
-# 🎫 Incident Management Workflow
-
-Each incident follows a structured Service Desk process:
-
-```text
-User Reports Issue
-        ↓
-Create Ticket
-        ↓
-Categorize & Prioritize
-        ↓
-Gather Information
-        ↓
-Investigate
-        ↓
-Troubleshoot
-        ↓
-Identify Root Cause
-        ↓
-Resolve or Escalate
-        ↓
-Verify Resolution
-        ↓
-Document
-        ↓
-Close Ticket
-```
+Configured the basic Service Desk structure, including **departments, help topics, support teams, agents, and a simulated end user**.
 
 ---
 
-# 🗂️ Incident Scenarios
+# Phase 3 — Incident Management
 
-The lab will use realistic entry-level IT support scenarios, including:
+The next phase will demonstrate realistic Level 1 support scenarios using the configured environment.
+
+Planned incidents include:
 
 | Incident                    | Support Area     |
 | --------------------------- | ---------------- |
@@ -250,140 +118,104 @@ The lab will use realistic entry-level IT support scenarios, including:
 | MFA / Login Issue           | Authentication   |
 | Hardware / Peripheral Issue | Hardware         |
 
-Each completed ticket will document:
+Each incident will demonstrate:
 
-**User Report → Investigation → Troubleshooting → Root Cause → Resolution → Verification → Closure**
-
----
-
-# 🚦 Incident Prioritization
-
-Tickets are prioritized according to **impact and urgency**.
-
-| Priority         | Example                        |
-| ---------------- | ------------------------------ |
-| 🔴 P1 — Critical | Major service outage           |
-| 🟠 P2 — High     | Multiple users affected        |
-| 🟡 P3 — Medium   | Single-user productivity issue |
-| 🟢 P4 — Low      | Minor issue or request         |
+**Ticket Creation → Categorization → Prioritization → Investigation → Troubleshooting → Resolution → Verification → Closure**
 
 ---
 
-# 🔎 Troubleshooting Methodology
+# 🔎 Troubleshooting Approach
 
-Technical issues are approached using a structured troubleshooting process:
+Incidents are handled using a structured first-line troubleshooting methodology:
 
 ```text
-Understand the Problem
+Understand the Issue
         ↓
 Gather Information
         ↓
-Reproduce / Test
+Perform Initial Checks
         ↓
 Isolate the Cause
         ↓
-Identify Root Cause
-        ↓
 Apply the Fix
         ↓
-Verify the Result
+Verify the Resolution
         ↓
-Document the Resolution
+Document the Work
         ↓
-Escalate When Required
+Escalate if Required
 ```
 
----
-
-# 💻 Troubleshooting Tools
-
-Examples of commands used during support investigations:
+Example Windows and networking tools:
 
 ```powershell
 ipconfig /all
-ping 8.8.8.8
-nslookup google.com
-tracert google.com
-Test-Connection google.com
+ping
+nslookup
+tracert
+Test-Connection
 Get-Service
-Get-WinEvent -LogName System -MaxEvents 20
+Get-WinEvent
 ```
-
-These tools support investigations involving:
-
-* Network configuration
-* Connectivity
-* DNS
-* Routing
-* Windows services
-* System events
 
 ---
 
 # 📝 Ticket Documentation
 
-Each completed ticket will contain:
+Tickets will contain concise, professional documentation such as:
 
-```text
-Ticket ID
-Category
-Priority
-Status
-
-User Report
-Investigation
-Troubleshooting
-Root Cause
-Resolution
-Verification
-User Communication
-Closure Notes
-```
-
-The goal is to demonstrate clear, professional, and repeatable Service Desk documentation.
+* User-reported issue
+* Impact and priority
+* Troubleshooting performed
+* Findings
+* Root cause
+* Resolution
+* Verification
+* User communication
+* Closure notes
 
 ---
 
 # 🚨 Escalation
 
-Incidents are escalated when they exceed the scope of first-line support.
+Issues outside the scope of Level 1 support will be documented and escalated appropriately.
 
-### Network / NOC
+Examples:
 
-* Multiple users affected
-* Switch or router failure
+**Network / NOC**
+
+* Network-wide outage
 * VLAN or routing issues
-* Major connectivity outages
+* Switch/router problems
 
-### Systems Administration
+**Systems Administration**
 
 * Server failures
 * Complex Active Directory issues
-* Group Policy infrastructure problems
+* Group Policy problems
 * Privileged access requirements
 
-### Security
+**Security**
 
 * Suspected compromised accounts
 * Malware
 * Suspicious authentication activity
-* Potential security incidents
 
 ---
 
 # 🏆 Skills Demonstrated
 
-**Service Desk:**
-Incident Management · Ticket Triage · Prioritization · User Communication · Documentation · Escalation
+### Service Desk
 
-**Troubleshooting:**
-Windows · Networking · DNS · Connectivity · Account & Access · Root-Cause Analysis
+Incident Management · Ticket Triage · Prioritization · Documentation · User Communication · Escalation
 
-**Technical:**
-PowerShell · TCP/IP · IPv4 · DNS · DHCP · ICMP
+### Technical Support
 
-**Tools:**
-osTicket · Docker · Docker Compose · WSL · Git · GitHub
+Windows · Networking · DNS · TCP/IP · Account & Access · Basic PowerShell
+
+### Tools
+
+osTicket · Docker · Docker Compose · MariaDB · WSL · Git · GitHub
 
 ---
 
@@ -397,20 +229,7 @@ IT-Service-Desk-Incident-Management-Lab/
 │
 ├── screenshots/
 │   ├── setup/
-│   │   ├── 01-docker-version.png
-│   │   ├── 02-docker-hello-world.png
-│   │   ├── 03-docker-compose-configuration.png
-│   │   ├── 04-containers-running.png
-│   │   └── 05-osticket-dashboard.png
-│   │
-│   ├── admin-config/
-│   │   ├── 06-admin-system-settings.png
-│   │   ├── 07-departments-configured.png
-│   │   ├── 08-help-topics-configured.png
-│   │   ├── 09-it-support-team.png
-│   │   └── 10-test-user-created.png
-│   │
-│   └── tickets/
+│   └── admin-config/
 │
 ├── tickets/
 │
@@ -421,13 +240,12 @@ IT-Service-Desk-Incident-Management-Lab/
 
 # 🔐 Security
 
-This is a personal learning and portfolio environment.
+This is a personal homelab and portfolio project.
 
 * All users and incidents are simulated
-* No customer or company data is used
-* Credentials are excluded from the public repository
-* Docker configuration containing passwords remains local
-* Screenshots are reviewed to avoid exposing sensitive information
+* No real customer or company information is used
+* Credentials and secrets are excluded from the repository
+* Screenshots are reviewed before publication
 
 ---
 
@@ -435,24 +253,7 @@ This is a personal learning and portfolio environment.
 
 This project demonstrates practical skills relevant to:
 
-* IT Support Technician
-* Service Desk Analyst
-* Help Desk Technician
-* Desktop Support Technician
-* Technical Support Specialist
-* IT Support Specialist
-* NOC Technician
-
----
-
-# 📌 Project Status
-
-| Phase                            | Status         |
-| -------------------------------- | -------------- |
-| Phase 1 — Environment Setup      | ✅ Completed    |
-| Phase 2 — osTicket Configuration | 🚧 In Progress |
-| Phase 3 — Incident Management    | 📋 Planned     |
-| Final Documentation              | 📋 Planned     |
+**IT Support Technician · Service Desk Analyst · Help Desk Technician · Desktop Support Technician · Technical Support Specialist · NOC Technician**
 
 ---
 
@@ -464,349 +265,19 @@ Computer Systems Networking Technician focused on entry-level **IT Support, Serv
 
 ### Certifications
 
-CCNA · Microsoft Azure Fundamentals (AZ-900) · Fortinet Certified Associate in Cybersecurity
+**CCNA · Microsoft Azure Fundamentals (AZ-900) · Fortinet Certified Associate in Cybersecurity**
 
 ### Technical Focus
 
-Windows · Active Directory · Microsoft 365 · Networking · PowerShell · Troubleshooting · Service Desk
+**Windows · Active Directory · Microsoft 365 · Networking · PowerShell · Troubleshooting · Service Desk**
 
 ---
 
-# 🔗 Professional Links
-
-* 💻 **GitHub:** [github.com/rikit03](https://github.com/rikit03)
-* 🌐 **Portfolio:** [rikit03.github.io/portfolio](https://rikit03.github.io/portfolio)
-* 🔗 **LinkedIn:** [linkedin.com/in/rikit-thapa-294ab028a](https://linkedin.com/in/rikit-thapa-294ab028a)
-* 📄 **Resume:** [View Resume](https://github.com/rikit03/rikit03.github.io/blob/main/resume.pdf)
-* 📧 **Email:** [rikitthapa2003@outlook.com](mailto:rikitthapa2003@outlook.com)
-
----
-
-**Built and documented by Rikit Thapa**
-
-*Personal homelab and simulated IT Service Desk environment created for hands-on learning and portfolio demonstration.*
-
-
-### 01 — Docker Environment
-
-Docker installation and version verification on Windows 11.
-
-![Docker Version](screenshots/setup/01-docker-version.png)
-
-### 02 — Docker Verification
-
-Docker functionality verified using the `hello-world` container.
-
-![Docker Hello World](screenshots/setup/02-docker-hello-world.png)
-
-### 03 — Docker Compose Configuration
-
-Docker Compose configuration used to define the osTicket and MariaDB services.
-
-![Docker Compose Configuration](screenshots/setup/03-docker-compose-configuration.png)
-
-### 04 — Running Containers
-
-The osTicket application and MariaDB database containers running successfully.
-
-![Running Containers](screenshots/setup/04-containers-running.png)
-
-### 05 — osTicket Service Desk
-
-Successfully accessed the deployed osTicket Service Desk through the local web interface.
-
-![osTicket Dashboard](screenshots/setup/05-osticket-dashboard.png)
-
-# ⚙️ Phase 2 — osTicket Configuration
-
-### 06 — Admin System Settings
-
-Configured and verified the osTicket administrative environment.
-
-![Admin System Settings](screenshots/admin-config/06-admin-system-settings.png)
-
-### 07 — Departments
-
-Configured departments to organize support requests and ticket routing.
-
-![Departments](screenshots/admin-config/07-departments-configured.png)
-
-### 08 — Help Topics
-
-Configured help topics for common IT support requests.
-
-![Help Topics](screenshots/admin-config/08-help-topics-configured.png)
-
-### 09 — Level I IT Support Team
-
-Configured the Level I IT Support team for first-line ticket handling.
-
-![Level I IT Support Team](screenshots/admin-config/09-it-support-team.png)
-
-### 10 — Test User
-
-Created a simulated customer account for use in the incident management scenarios.
-
-![Test User](screenshots/admin-config/10-test-user-created.png)
-
-
----
-
-# 🎫 Incident Management Workflow
-
-Each incident follows a structured Service Desk process:
-
-```text
-User Reports Issue
-        ↓
-Create Ticket
-        ↓
-Categorize & Prioritize
-        ↓
-Gather Information
-        ↓
-Investigate
-        ↓
-Troubleshoot
-        ↓
-Identify Root Cause
-        ↓
-Resolve or Escalate
-        ↓
-Verify Resolution
-        ↓
-Document
-        ↓
-Close Ticket
-```
-
----
-
-# 🗂️ Incident Scenarios
-
-The lab will use realistic entry-level IT support scenarios, including:
-
-| Incident                    | Support Area     |
-| --------------------------- | ---------------- |
-| Password Reset              | Account & Access |
-| Account Lockout             | Account & Access |
-| Shared Folder Access        | Permissions      |
-| Internet Connectivity       | Networking       |
-| DNS Resolution              | Networking       |
-| VPN Connectivity            | Remote Access    |
-| Slow Computer               | Windows          |
-| Application Failure         | Software         |
-| MFA / Login Issue           | Authentication   |
-| Hardware / Peripheral Issue | Hardware         |
-
-Each completed ticket will document:
-
-**User Report → Investigation → Troubleshooting → Root Cause → Resolution → Verification → Closure**
-
----
-
-# 🚦 Incident Prioritization
-
-Tickets are prioritized according to **impact and urgency**.
-
-| Priority         | Example                        |
-| ---------------- | ------------------------------ |
-| 🔴 P1 — Critical | Major service outage           |
-| 🟠 P2 — High     | Multiple users affected        |
-| 🟡 P3 — Medium   | Single-user productivity issue |
-| 🟢 P4 — Low      | Minor issue or request         |
-
----
-
-# 🔎 Troubleshooting Methodology
-
-Technical issues are approached using a structured troubleshooting process:
-
-```text
-Understand the Problem
-        ↓
-Gather Information
-        ↓
-Reproduce / Test
-        ↓
-Isolate the Cause
-        ↓
-Identify Root Cause
-        ↓
-Apply the Fix
-        ↓
-Verify the Result
-        ↓
-Document the Resolution
-        ↓
-Escalate When Required
-```
-
----
-
-# 💻 Troubleshooting Tools
-
-Examples of commands used during support investigations:
-
-```powershell
-ipconfig /all
-ping 8.8.8.8
-nslookup google.com
-tracert google.com
-Test-Connection google.com
-Get-Service
-Get-WinEvent -LogName System -MaxEvents 20
-```
-
-These tools support investigations involving:
-
-* Network configuration
-* Connectivity
-* DNS
-* Routing
-* Windows services
-* System events
-
----
-
-# 📝 Ticket Documentation
-
-Each completed ticket will contain:
-
-```text
-Ticket ID
-Category
-Priority
-Status
-
-User Report
-Investigation
-Troubleshooting
-Root Cause
-Resolution
-Verification
-User Communication
-Closure Notes
-```
-
-The goal is to demonstrate clear, professional, and repeatable Service Desk documentation.
-
----
-
-# 🚨 Escalation
-
-Incidents are escalated when they exceed the scope of first-line support.
-
-### Network / NOC
-
-* Multiple users affected
-* Switch or router failure
-* VLAN or routing issues
-* Major connectivity outages
-
-### Systems Administration
-
-* Server failures
-* Complex Active Directory issues
-* Group Policy infrastructure problems
-* Privileged access requirements
-
-### Security
-
-* Suspected compromised accounts
-* Malware
-* Suspicious authentication activity
-* Potential security incidents
-
----
-
-# 🏆 Skills Demonstrated
-
-**Service Desk:**
-Incident Management · Ticket Triage · Prioritization · User Communication · Documentation · Escalation
-
-**Troubleshooting:**
-Windows · Networking · DNS · Connectivity · Account & Access · Root-Cause Analysis
-
-**Technical:**
-PowerShell · TCP/IP · IPv4 · DNS · DHCP · ICMP
-
-**Tools:**
-osTicket · Docker · Docker Compose · WSL · Git · GitHub
-
----
-
-# 📂 Repository Structure
-
-```text
-IT-Service-Desk-Incident-Management-Lab/
-│
-├── README.md
-│
-├── screenshots/
-│   └── setup/
-│       ├── 01-docker-version.png
-│       ├── 02-docker-hello-world.png
-│       ├── 03-docker-compose-configuration.png
-│       ├── 04-containers-running.png
-│       └── 05-osticket-dashboard.png
-│
-├── tickets/
-│
-└── documentation/
-```
-
----
-
-# 🔐 Security
-
-This is a personal learning and portfolio environment.
-
-* All users and incidents are simulated
-* No customer or company data is used
-* Credentials are excluded from the public repository
-* Docker configuration containing passwords remains local
-* Screenshots are reviewed to avoid exposing sensitive information
-
----
-
-# 💼 Career Relevance
-
-This project demonstrates practical skills relevant to:
-
-* IT Support Technician
-* Service Desk Analyst
-* Help Desk Technician
-* Desktop Support Technician
-* Technical Support Specialist
-* IT Support Specialist
-* NOC Technician
-
----
-
-# 👤 About
-
-**Rikit Thapa**
-
-Computer Systems Networking Technician focused on entry-level **IT Support, Service Desk, Desktop Support, and NOC** opportunities.
-
-### Certifications
-
-CCNA · Microsoft Azure Fundamentals (AZ-900) · Fortinet Certified Associate in Cybersecurity
-
-### Technical Focus
-
-Windows · Active Directory · Microsoft 365 · Networking · PowerShell · Troubleshooting · Service Desk
-
----
-
-# 🔗 Professional Links
-
-* 💻 **GitHub:** [github.com/rikit03](https://github.com/rikit03)
-* 🌐 **Portfolio:** [rikit03.github.io/portfolio](https://rikit03.github.io/portfolio)
-* 🔗 **LinkedIn:** [linkedin.com/in/rikit-thapa-294ab028a](https://www.linkedin.com/in/rikit-thapa-294ab028a)
-* 📄 **Resume:** [View Resume](https://github.com/rikit03/rikit03.github.io/blob/main/resume.pdf)
-* 📧 **Email:** [rikitthapa2003@outlook.com](mailto:rikitthapa2003@outlook.com)
+## 🔗 Professional Links
+
+* GitHub: https://github.com/rikit03
+* Portfolio: https://rikit03.github.io/portfolio
+* LinkedIn: https://linkedin.com/in/rikit-thapa-294ab028a
 
 ---
 
