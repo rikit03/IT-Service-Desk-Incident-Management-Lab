@@ -97,6 +97,39 @@ Successfully accessed the deployed osTicket Service Desk through the local web i
 
 ![osTicket Dashboard](screenshots/setup/05-osticket-dashboard.png)
 
+# ⚙️ Phase 2 — osTicket Configuration
+
+### 06 — Admin System Settings
+
+Configured and verified the osTicket administrative environment.
+
+![Admin System Settings](screenshots/admin-config/06-admin-system-settings.png)
+
+### 07 — Departments
+
+Configured departments to organize support requests and ticket routing.
+
+![Departments](screenshots/admin-config/07-departments-configured.png)
+
+### 08 — Help Topics
+
+Configured help topics for common IT support requests.
+
+![Help Topics](screenshots/admin-config/08-help-topics-configured.png)
+
+### 09 — Level I IT Support Team
+
+Configured the Level I IT Support team for first-line ticket handling.
+
+![Level I IT Support Team](screenshots/admin-config/09-it-support-team.png)
+
+### 10 — Test User
+
+Created a simulated customer account for use in the incident management scenarios.
+
+![Test User](screenshots/admin-config/10-test-user-created.png)
+
+
 ---
 
 # 🎫 Incident Management Workflow
