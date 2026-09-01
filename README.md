@@ -14,7 +14,7 @@ This project demonstrates practical experience with Service Desk administration,
 * Simulate realistic Level 1 IT support incidents.
 * Document troubleshooting and customer communication.
 * Demonstrate the complete incident lifecycle from creation to closure.
-* Maintain technical documentation and screenshot evidence using GitHub.
+* Maintain technical documentation and evidence using GitHub.
 
 ---
 
@@ -39,8 +39,10 @@ IT-Service-Desk-Incident-Management-Lab/
 │
 ├── README.md
 ├── .gitignore
+├── docker-compose.yml
 │
 ├── screenshots/
+│   │
 │   ├── setup/
 │   │   ├── 01-docker-version.png
 │   │   ├── 02-docker-hello-world.png
@@ -56,7 +58,7 @@ IT-Service-Desk-Incident-Management-Lab/
 │   │   └── 10-test-user-created.png
 │   │
 │   └── tickets/
-│       └── ticket-01-microsoft-365-login/
+│       └── ticket-01/
 │           ├── Phase3_Ticket01_User_Creation.png
 │           ├── Phase3_Ticket01_Created.png
 │           ├── Phase3_Ticket01_Internal_Note.png
@@ -65,7 +67,6 @@ IT-Service-Desk-Incident-Management-Lab/
 │           └── Phase3_Ticket01_Closed.png
 │
 └── tickets/
-    └── ...
 ```
 
 ---
@@ -74,9 +75,7 @@ IT-Service-Desk-Incident-Management-Lab/
 
 ## Objective
 
-Build the technical environment required to run the IT Service Desk lab.
-
-The environment uses Docker containers, WSL/Ubuntu, MariaDB, and osTicket.
+Build the technical environment required to run the IT Service Desk lab using Docker, WSL/Ubuntu, MariaDB, and osTicket.
 
 ---
 
@@ -84,9 +83,7 @@ The environment uses Docker containers, WSL/Ubuntu, MariaDB, and osTicket.
 
 Docker was verified from the Windows environment to confirm that Docker was installed and available for the lab.
 
-**Screenshot:** `01-docker-version.png`
-
-![Docker Version Verification](./screenshots/setup/01-docker-version.png)
+![Docker Version](./screenshots/setup/01-docker-version.png)
 
 ---
 
@@ -94,17 +91,13 @@ Docker was verified from the Windows environment to confirm that Docker was inst
 
 A Docker Hello World container was executed to verify that Docker could successfully create and run containers.
 
-**Screenshot:** `02-docker-hello-world.png`
-
-![Docker Hello World Test](./screenshots/setup/02-docker-hello-world.png)
+![Docker Hello World](./screenshots/setup/02-docker-hello-world.png)
 
 ---
 
 ## 1.3 Docker Compose Configuration
 
-A Docker Compose configuration was created to define the services required for the osTicket environment, including the application and database.
-
-**Screenshot:** `03-docker-compose-configuration.png`
+A Docker Compose configuration was created to define the services required for the osTicket environment, including the application and MariaDB database.
 
 ![Docker Compose Configuration](./screenshots/setup/03-docker-compose-configuration.png)
 
@@ -112,19 +105,15 @@ A Docker Compose configuration was created to define the services required for t
 
 ## 1.4 Containers Running
 
-The running Docker containers were verified to ensure that the osTicket and MariaDB services were successfully deployed.
+The running containers were verified to confirm that the osTicket and MariaDB services were successfully deployed.
 
-**Screenshot:** `04-containers-running.png`
-
-![Docker Containers Running](./screenshots/setup/04-containers-running.png)
+![Containers Running](./screenshots/setup/04-containers-running.png)
 
 ---
 
 ## 1.5 osTicket Dashboard
 
 The osTicket dashboard was accessed successfully, confirming that the Service Desk application was installed and operational.
-
-**Screenshot:** `05-osticket-dashboard.png`
 
 ![osTicket Dashboard](./screenshots/setup/05-osticket-dashboard.png)
 
@@ -136,7 +125,7 @@ The osTicket dashboard was accessed successfully, confirming that the Service De
 
 Configure osTicket to simulate a realistic corporate IT Service Desk environment.
 
-This phase includes system settings, departments, Help Topics, support staff, and test users.
+This phase covers system settings, departments, Help Topics, support staff, and test users.
 
 ---
 
@@ -144,17 +133,13 @@ This phase includes system settings, departments, Help Topics, support staff, an
 
 The osTicket administration settings were configured to establish the basic Service Desk environment and ticket management behavior.
 
-**Screenshot:** `06-admin-system-settings.png`
-
 ![Admin System Settings](./screenshots/admin-config/06-admin-system-settings.png)
 
 ---
 
 ## 2.2 Departments Configured
 
-IT Support departments were configured to organize and route incidents to the appropriate support team.
-
-**Screenshot:** `07-departments-configured.png`
+IT Support departments were configured to organize incidents and route tickets to the appropriate support team.
 
 ![Departments Configured](./screenshots/admin-config/07-departments-configured.png)
 
@@ -162,9 +147,7 @@ IT Support departments were configured to organize and route incidents to the ap
 
 ## 2.3 Help Topics Configured
 
-Help Topics were configured to categorize common Service Desk requests and make ticket classification easier.
-
-**Screenshot:** `08-help-topics-configured.png`
+Help Topics were configured to categorize common Service Desk requests and improve ticket classification.
 
 ![Help Topics Configured](./screenshots/admin-config/08-help-topics-configured.png)
 
@@ -174,19 +157,15 @@ Help Topics were configured to categorize common Service Desk requests and make 
 
 IT Support staff/agents were configured so incidents could be assigned to the appropriate Service Desk personnel.
 
-**Screenshot:** `09-it-support-team.png`
-
 ![IT Support Team](./screenshots/admin-config/09-it-support-team.png)
 
 ---
 
 ## 2.5 Test User Created
 
-A test customer account was created to simulate an employee submitting an IT support request.
+A test customer account named **Tony Stark** was created to simulate an employee submitting an IT support request.
 
-This user is used in Phase 3 for the Microsoft 365 incident scenario.
-
-**Screenshot:** `10-test-user-created.png`
+This account is used in Phase 3 for the Microsoft 365 login incident.
 
 ![Test User Created](./screenshots/admin-config/10-test-user-created.png)
 
@@ -256,75 +235,75 @@ The Service Desk agent created and categorized the incident, investigated the pr
 
 ---
 
-# 📸 Ticket 01 — Evidence
+# 📸 Ticket 01 — Screenshot Evidence
 
-All Ticket 01 screenshots are stored in:
+All Ticket 01 evidence is stored in:
 
 ```text
 screenshots/
 └── tickets/
-    └── ticket-01-microsoft-365-login/
+    └── ticket-01/
 ```
 
 ---
 
 ## 3.1 User Creation
 
-Tony Stark was created as the test customer who would be used to simulate the Microsoft 365 support incident.
-
 **Screenshot:** `Phase3_Ticket01_User_Creation.png`
 
-![Ticket 01 - User Creation](./screenshots/tickets/ticket-01-microsoft-365-login/Phase3_Ticket01_User_Creation.png)
+Tony Stark was created as the test customer who would be used to simulate the Microsoft 365 support incident.
+
+![Ticket 01 - User Creation](./screenshots/tickets/ticket-01/Phase3_Ticket01_User_Creation.png)
 
 ---
 
 ## 3.2 Ticket Created
 
-The Microsoft 365 login issue was submitted as a new Service Desk ticket and recorded in osTicket.
-
 **Screenshot:** `Phase3_Ticket01_Created.png`
 
-![Ticket 01 - Created](./screenshots/tickets/ticket-01-microsoft-365-login/Phase3_Ticket01_Created.png)
+The Microsoft 365 login issue was submitted as a new Service Desk ticket and recorded in osTicket.
+
+![Ticket 01 - Created](./screenshots/tickets/ticket-01/Phase3_Ticket01_Created.png)
 
 ---
 
 ## 3.3 Internal Troubleshooting
 
-An internal note was added to document the troubleshooting and investigation performed by the IT Support agent.
-
 **Screenshot:** `Phase3_Ticket01_Internal_Note.png`
 
-![Ticket 01 - Internal Note](./screenshots/tickets/ticket-01-microsoft-365-login/Phase3_Ticket01_Internal_Note.png)
+An internal note was added to document the investigation and troubleshooting actions performed by the IT Support agent.
+
+![Ticket 01 - Internal Note](./screenshots/tickets/ticket-01/Phase3_Ticket01_Internal_Note.png)
 
 ---
 
 ## 3.4 Customer Reply
 
-The customer was updated during the troubleshooting process and provided with information regarding the status of the incident.
-
 **Screenshot:** `Phase3_Ticket01_Customer_Reply.png`
 
-![Ticket 01 - Customer Reply](./screenshots/tickets/ticket-01-microsoft-365-login/Phase3_Ticket01_Customer_Reply.png)
+The customer was updated during the troubleshooting process and provided with information regarding the status of the incident.
+
+![Ticket 01 - Customer Reply](./screenshots/tickets/ticket-01/Phase3_Ticket01_Customer_Reply.png)
 
 ---
 
 ## 3.5 Resolution
 
-The resolution was documented after troubleshooting was completed and the Microsoft 365 access issue was resolved.
-
 **Screenshot:** `Phase3_Ticket01_Resolution.png`
 
-![Ticket 01 - Resolution](./screenshots/tickets/ticket-01-microsoft-365-login/Phase3_Ticket01_Resolution.png)
+The resolution was documented after troubleshooting was completed and the Microsoft 365 access issue was resolved.
+
+![Ticket 01 - Resolution](./screenshots/tickets/ticket-01/Phase3_Ticket01_Resolution.png)
 
 ---
 
 ## 3.6 Ticket Closed
 
-The incident was closed after the resolution was confirmed, completing the Service Desk ticket lifecycle.
-
 **Screenshot:** `Phase3_Ticket01_Closed.png`
 
-![Ticket 01 - Closed](./screenshots/tickets/ticket-01-microsoft-365-login/Phase3_Ticket01_Closed.png)
+The incident was closed after the resolution was confirmed, completing the Service Desk ticket lifecycle.
+
+![Ticket 01 - Closed](./screenshots/tickets/ticket-01/Phase3_Ticket01_Closed.png)
 
 ---
 
@@ -505,11 +484,13 @@ The lab is designed to demonstrate the practical skills expected from a **Level 
 
 ---
 
-## 👨‍💻 Author
+## 📌 Repository
 
-**Rikit Thapa**
+**GitHub:**
+https://github.com/rikit03/IT-Service-Desk-Incident-Management-Lab
 
-IT Support / Service Desk Portfolio Project
+---
 
-GitHub: [IT-Service-Desk-Incident-Management-Lab](https://github.com/rikit03/IT-Service-Desk-Incident-Management-Lab)
+## About
 
+Simulated IT Service Desk lab demonstrating ticket intake, categorization, prioritization, troubleshooting, resolution, user communication, and incident documentation.
