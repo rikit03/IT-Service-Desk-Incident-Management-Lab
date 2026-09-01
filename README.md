@@ -248,6 +248,122 @@ Successfully demonstrated the complete lifecycle of a simulated Microsoft 365 au
 > **Create → Triage → Investigate → Document → Communicate → Close**
 
 ---
+# 🎫 Ticket 02 — Windows Account Lockout
+
+**Ticket Type:** Account & Access
+**User:** Tony Stark
+**Issue:** Windows account locked after multiple failed login attempts
+**Priority:** High
+**Help Topic:** Login Issue
+**Department:** Support
+**Assigned To:** Rikit Thapa
+**Status:** Closed
+
+---
+
+## Incident Overview
+
+The user reported being unable to sign in to their Windows account after multiple unsuccessful login attempts.
+
+The incident was handled as a simulated **Level 1 Service Desk account-access issue**.
+
+The troubleshooting workflow followed:
+
+> **Create → Triage → Investigate → Resolve → Communicate → Close**
+
+---
+
+## 1. Ticket Created
+
+The user submitted a support request reporting that their Windows account appeared to be locked.
+
+![Ticket Created](./screenshots/tickets/ticket-02/Phase3_Ticket02_Created.png)
+
+**Service Desk actions demonstrated:**
+
+* Captured the user's issue
+* Identified the affected account
+* Created the incident ticket
+* Selected the appropriate Help Topic
+* Recorded the initial user report
+
+---
+
+## 2. Ticket Triage
+
+The ticket was reviewed and assessed by the Service Desk agent.
+
+The incident was categorized as a **Login Issue**, assigned to **Rikit Thapa**, and given a **High** priority.
+
+![Ticket Triage](./screenshots/tickets/ticket-02/Phase3_Ticket02_Triage.png)
+
+**Service Desk actions demonstrated:**
+
+* Reviewed the reported issue
+* Categorized the incident
+* Assessed priority
+* Assigned the ticket
+* Prepared the incident for investigation
+
+---
+
+## 3. Internal Troubleshooting Note
+
+An internal note was added to document the investigation and troubleshooting performed by the support agent.
+
+![Internal Troubleshooting Note](./screenshots/tickets/ticket-02/Phase3_Ticket02_Internal_Note.png)
+
+**Investigation documented:**
+
+* Reviewed the reported login failure
+* Identified a likely account lockout condition
+* Verified the account-access issue
+* Documented the next troubleshooting action
+
+---
+
+## 4. Customer Communication
+
+After the account was verified and unlocked, the user was notified through the ticket.
+
+![Customer Reply](./screenshots/tickets/ticket-02/Phase3_Ticket02_Customer_Reply.png)
+
+**User support demonstrated:**
+
+* Professional communication
+* Clear explanation of the issue
+* Confirmation of the corrective action
+* Instructions for the user to retry authentication
+
+---
+
+## 5. Ticket Closed
+
+After the account-access issue was addressed and customer communication was completed, the ticket was closed.
+
+![Ticket Closed](./screenshots/tickets/ticket-02/Phase3_Ticket02_Closed.png)
+
+**Closure demonstrated:**
+
+* Resolution documented
+* User communication completed
+* Ticket status updated
+* Incident lifecycle completed
+
+---
+
+## Ticket 02 Result
+
+Successfully demonstrated the handling of a simulated Windows account lockout incident from initial ticket creation through triage, investigation, resolution, user communication, and closure.
+
+> **Create → Triage → Investigate → Resolve → Communicate → Close**
+
+---
+
+## Skills Demonstrated
+
+**Account & Access Management · Incident Management · Ticket Triage · Prioritization · Troubleshooting · Internal Documentation · Customer Communication · Ticket Closure**
+
 
 # 🔎 Troubleshooting Approach
 
