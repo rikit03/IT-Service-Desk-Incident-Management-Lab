@@ -578,14 +578,29 @@ IT-Service-Desk-Incident-Management-Lab/
 │       │   ├── Phase3_Ticket01_Customer_Reply.png
 │       │   └── Phase3_Ticket01_Closed.png
 │       │
-│       └── ticket-02/
-│           ├── Phase3_Ticket02_Created.png
-│           ├── Phase3_Ticket02_Triage.png
-│           ├── Phase3_Ticket02_Internal_Note.png
-│           ├── Phase3_Ticket02_Customer_Reply.png
-│           └── Phase3_Ticket02_Closed.png
+│       ├── ticket-02/
+│       │   ├── Phase3_Ticket02_Created.png
+│       │   ├── Phase3_Ticket02_Triage.png
+│       │   ├── Phase3_Ticket02_Internal_Note.png
+│       │   ├── Phase3_Ticket02_Customer_Reply.png
+│       │   └── Phase3_Ticket02_Closed.png
+│       │
+│       ├── ticket-03/
+│       │   ├── Phase3_Ticket03_Created.png
+│       │   ├── Phase3_Ticket03_Triage.png
+│       │   ├── Phase3_Ticket03_Internal_Note.png
+│       │   ├── Phase3_Ticket03_Customer_Reply.png
+│       │   └── Phase3_Ticket03_Closed.png
+│       │
+│       └── ticket-04/
+│           ├── Phase3_Ticket04_Created.png
+│           ├── Phase3_Ticket04_Triage.png
+│           ├── Phase3_Ticket04_Customer_Reply.png
+│           └── Phase3_Ticket04_Closed.png
 │
 └── .gitignore
+```
+
 ```
 
 
