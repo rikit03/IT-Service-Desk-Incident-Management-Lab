@@ -486,15 +486,24 @@ IT-Service-Desk-Incident-Management-Lab/
 │   │   └── 10-test-user-created.png
 │   │
 │   └── tickets/
-│       └── ticket-01/
-│           ├── Phase3_Ticket01_Created.png
-│           ├── Phase3_Ticket01_Triage.png
-│           ├── Phase3_Ticket01_Internal_Note.png
-│           ├── Phase3_Ticket01_Customer_Reply.png
-│           └── Phase3_Ticket01_Closed.png
+│       │
+│       ├── ticket-01/
+│       │   ├── Phase3_Ticket01_Created.png
+│       │   ├── Phase3_Ticket01_Triage.png
+│       │   ├── Phase3_Ticket01_Internal_Note.png
+│       │   ├── Phase3_Ticket01_Customer_Reply.png
+│       │   └── Phase3_Ticket01_Closed.png
+│       │
+│       └── ticket-02/
+│           ├── Phase3_Ticket02_Created.png
+│           ├── Phase3_Ticket02_Triage.png
+│           ├── Phase3_Ticket02_Internal_Note.png
+│           ├── Phase3_Ticket02_Customer_Reply.png
+│           └── Phase3_Ticket02_Closed.png
 │
 └── .gitignore
 ```
+
 
 ---
 
