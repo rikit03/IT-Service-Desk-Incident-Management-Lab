@@ -88,15 +88,15 @@ Successfully deployed a local osTicket environment with MariaDB using Docker Com
 
 ---
 
-# Phase 2 — osTicket Configuration
+# Phase 2 — osTicket Administration & Configuration
 
-Configured the Service Desk structure required for realistic incident management.
+Configured the Service Desk structure required to support realistic incident management.
 
-### 6. System Settings
+### 6. Admin System Settings
 
 Configured the primary osTicket system settings.
 
-![System Settings](./screenshots/admin-config/06-system-settings.png)
+![Admin System Settings](./screenshots/admin-config/06-admin-system-settings.png)
 
 ---
 
@@ -104,7 +104,7 @@ Configured the primary osTicket system settings.
 
 Configured the departments used to organize Service Desk support.
 
-![Departments](./screenshots/admin-config/07-departments.png)
+![Departments Configured](./screenshots/admin-config/07-departments-configured.png)
 
 ---
 
@@ -112,15 +112,15 @@ Configured the departments used to organize Service Desk support.
 
 Configured help topics to categorize incoming incidents.
 
-![Help Topics](./screenshots/admin-config/08-help-topics.png)
+![Help Topics Configured](./screenshots/admin-config/08-help-topics-configured.png)
 
 ---
 
-### 9. Level I IT Support Team
+### 9. IT Support Team
 
 Configured the Level I IT Support team and assigned the appropriate support agent.
 
-![Level I IT Support](./screenshots/admin-config/09-level-i-it-support.png)
+![IT Support Team](./screenshots/admin-config/09-it-support-team.png)
 
 ---
 
@@ -128,23 +128,23 @@ Configured the Level I IT Support team and assigned the appropriate support agen
 
 Created a simulated end user for testing the Service Desk workflow.
 
-![Test User](./screenshots/admin-config/10-test-user-created.png)
+![Test User Created](./screenshots/admin-config/10-test-user-created.png)
 
 ---
 
 ### Phase 2 Result
 
-Configured the basic Service Desk structure, including departments, help topics, support teams, agents, and a simulated end user.
+Successfully configured the osTicket Service Desk structure, including system settings, departments, help topics, support teams, agents, and a simulated end user.
 
 ---
 
 # Phase 3 — Incident Management
 
-Phase 3 demonstrates realistic **Level 1 IT Service Desk incident management** using the configured osTicket environment.
+Phase 3 demonstrates a realistic **Level 1 IT Service Desk incident management workflow** using the configured osTicket environment.
 
 Each incident follows a structured workflow:
 
-> **Ticket Creation → Triage → Prioritization → Investigation → Troubleshooting → User Communication → Verification → Closure**
+> **Ticket Creation → Triage → Investigation → Troubleshooting → User Communication → Verification → Closure**
 
 ---
 
@@ -171,8 +171,8 @@ The incident was submitted through the osTicket web portal and entered into the 
 **Service Desk actions demonstrated:**
 
 * Captured the user's issue
-* Recorded the affected service
-* Identified the user
+* Identified the affected service
+* Identified the end user
 * Created the incident ticket
 * Started the incident management process
 
@@ -182,14 +182,14 @@ The incident was submitted through the osTicket web portal and entered into the 
 
 The ticket was reviewed and assessed by the Service Desk agent.
 
-The incident was categorized as a **Login Issue**, assigned to **Rikit Thapa**, and given a **High** priority based on the reported impact.
+The incident was categorized as a **Login Issue**, assigned to **Rikit Thapa**, and given a **High** priority.
 
 ![Ticket Triage](./screenshots/tickets/ticket-01/Phase3_Ticket01_Triage.png)
 
 **Service Desk actions demonstrated:**
 
 * Reviewed the reported issue
-* Identified the appropriate category
+* Categorized the incident
 * Assessed priority
 * Assigned the ticket
 * Prepared the incident for troubleshooting
@@ -198,9 +198,9 @@ The incident was categorized as a **Login Issue**, assigned to **Rikit Thapa**, 
 
 ## 3. Internal Troubleshooting Note
 
-An internal note was added to document the investigation performed by the support agent.
+An internal note was added to document the investigation and troubleshooting performed by the support agent.
 
-![Internal Note](./screenshots/tickets/ticket-01/Phase3_Ticket01_Internal_Note.png)
+![Internal Troubleshooting Note](./screenshots/tickets/ticket-01/Phase3_Ticket01_Internal_Note.png)
 
 **Documentation demonstrated:**
 
@@ -363,10 +363,10 @@ IT-Service-Desk-Incident-Management-Lab/
 │   │   └── 05-osticket-dashboard.png
 │   │
 │   ├── admin-config/
-│   │   ├── 06-system-settings.png
-│   │   ├── 07-departments.png
-│   │   ├── 08-help-topics.png
-│   │   ├── 09-level-i-it-support.png
+│   │   ├── 06-admin-system-settings.png
+│   │   ├── 07-departments-configured.png
+│   │   ├── 08-help-topics-configured.png
+│   │   ├── 09-it-support-team.png
 │   │   └── 10-test-user-created.png
 │   │
 │   └── tickets/
