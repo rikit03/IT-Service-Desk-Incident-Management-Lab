@@ -359,6 +359,90 @@ Successfully demonstrated the handling of a simulated Windows account lockout in
 > **Create → Triage → Investigate → Resolve → Communicate → Close**
 
 ---
+## 🎫 Ticket 03 — Network Connectivity Issue
+
+**Scenario:** User is unable to access the internet from their workstation.
+
+**Ticket Details:**
+
+* **User:** Tony Stark
+* **Subject:** Unable to access the internet
+* **Department:** Support
+* **Help Topic:** Network Issue
+* **Priority:** Medium
+* **Assigned To:** Rikit Thapa
+* **Status:** Closed
+
+### 1. Ticket Created
+
+The customer reported that they were connected to the network but unable to access websites.
+
+![Ticket 03 - Created](./screenshots/tickets/ticket-03/Phase3_Ticket03_Created.png)
+
+### 2. Ticket Triage
+
+The ticket was reviewed, prioritized, assigned to the IT Support department, and assigned to the support technician.
+
+![Ticket 03 - Triage](./screenshots/tickets/ticket-03/Phase3_Ticket03_Triage.png)
+
+### 3. Internal Troubleshooting Note
+
+Basic network connectivity troubleshooting was documented, including IP configuration, gateway connectivity, and external connectivity checks.
+
+![Ticket 03 - Internal Note](./screenshots/tickets/ticket-03/Phase3_Ticket03_Internal_Note.png)
+
+### 4. Customer Reply
+
+The customer was informed that the network connectivity issue had been resolved and was asked to verify internet access.
+
+![Ticket 03 - Customer Reply](./screenshots/tickets/ticket-03/Phase3_Ticket03_Customer_Reply.png)
+
+### 5. Ticket Closed
+
+The resolution was documented and the ticket was closed after confirming that internet access was working normally.
+
+![Ticket 03 - Closed](./screenshots/tickets/ticket-03/Phase3_Ticket03_Closed.png)
+
+---
+
+## 🎫 Ticket 04 — DNS Resolution Failure
+
+**Scenario:** User is connected to the network but cannot access websites because of a DNS resolution issue.
+
+**Ticket Details:**
+
+* **User:** Tony Stark
+* **Subject:** Unable to access websites due to DNS issue
+* **Department:** Support
+* **Help Topic:** Network Issue
+* **Priority:** Medium
+* **Assigned To:** Rikit Thapa
+* **Status:** Closed
+
+### 1. Ticket Created
+
+The customer reported that the network connection appeared to be working, but websites were not loading by name.
+
+![Ticket 04 - Created](./screenshots/tickets/ticket-04/Phase3_Ticket04_Created.png)
+
+### 2. Ticket Triage
+
+The ticket was reviewed and assigned to the IT Support department for DNS and network troubleshooting.
+
+![Ticket 04 - Triage](./screenshots/tickets/ticket-04/Phase3_Ticket04_Triage.png)
+
+### 3. Customer Reply
+
+The customer was informed that the DNS issue had been resolved and was asked to verify website access.
+
+![Ticket 04 - Customer Reply](./screenshots/tickets/ticket-04/Phase3_Ticket04_Customer_Reply.png)
+
+### 4. Ticket Closed
+
+The resolution was documented after DNS name resolution was restored and the customer confirmed that website access was working normally.
+
+![Ticket 04 - Closed](./screenshots/tickets/ticket-04/Phase3_Ticket04_Closed.png)
+
 
 ## Skills Demonstrated
 
