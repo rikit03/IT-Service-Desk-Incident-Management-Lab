@@ -1,12 +1,24 @@
 # IT Service Desk & Incident Management Lab
 
-A hands-on IT Service Desk lab designed to simulate a real-world Level 1 IT Support environment using **osTicket, Docker, WSL/Ubuntu, and MariaDB**.
+A hands-on IT Service Desk lab built to simulate a real-world Level 1 IT Support environment using **osTicket, Docker, WSL/Ubuntu, MariaDB, and GitHub**.
 
-This project demonstrates practical experience with ticket management, incident investigation, troubleshooting, customer communication, resolution, documentation, and ticket lifecycle management.
+This project demonstrates practical experience with Service Desk administration, incident management, troubleshooting, customer communication, ticket documentation, resolution, and ticket closure.
 
 ---
 
-## 🛠️ Lab Environment
+## 🎯 Project Objectives
+
+* Build and configure a functional IT Service Desk environment.
+* Deploy and configure osTicket using Docker.
+* Configure departments, Help Topics, staff/agents, priorities, SLA, and test users.
+* Simulate realistic Level 1 IT support incidents.
+* Document troubleshooting and customer communication.
+* Demonstrate the complete incident lifecycle from creation to closure.
+* Maintain technical documentation and evidence using GitHub.
+
+---
+
+# 🛠️ Lab Environment
 
 | Component         | Technology              |
 | ----------------- | ----------------------- |
@@ -20,22 +32,39 @@ This project demonstrates practical experience with ticket management, incident 
 
 ---
 
-# 🎯 Project Objectives
+# 📁 Project Structure
 
-This lab was created to demonstrate practical IT Service Desk and Level 1 IT Support skills, including:
-
-* Incident and ticket management
-* User account administration
-* Microsoft 365 troubleshooting
-* Windows troubleshooting
-* Customer communication
-* Internal documentation
-* Ticket prioritization
-* SLA awareness
-* Incident resolution
-* Ticket closure
-* Technical documentation
-* Git and GitHub
+```text
+IT-Service-Desk-Incident-Management-Lab/
+│
+├── README.md
+├── .gitignore
+│
+├── screenshots/
+│   │
+│   ├── setup/
+│   │   ├── 01-docker-version.png
+│   │   ├── 02-docker-hello-world.png
+│   │   ├── 03-docker-compose-configuration.png
+│   │   ├── 04-containers-running.png
+│   │   └── 05-osticket-dashboard.png
+│   │
+│   ├── admin-config/
+│   │   ├── 06-admin-system-settings.png
+│   │   ├── 07-departments-configured.png
+│   │   ├── 08-help-topics-configured.png
+│   │   ├── 09-it-support-team.png
+│   │   └── 10-test-user-created.png
+│   │
+│   └── tickets/
+│       └── ticket-01-microsoft-365-login/
+│           ├── Phase3_Ticket01_User_Creation.png
+│           ├── Phase3_Ticket01_Created.png
+│           ├── Phase3_Ticket01_Internal_Note.png
+│           ├── Phase3_Ticket01_Customer_Reply.png
+│           ├── Phase3_Ticket01_Resolution.png
+│           └── Phase3_Ticket01_Closed.png
+```
 
 ---
 
@@ -43,39 +72,49 @@ This lab was created to demonstrate practical IT Service Desk and Level 1 IT Sup
 
 ## Objective
 
-Build and deploy a functional IT Service Desk environment using Docker, WSL/Ubuntu, MariaDB, and osTicket.
+Build the technical environment required to run the IT Service Desk lab.
 
-## Tasks Completed
+The environment uses Docker containers, WSL/Ubuntu, MariaDB, and osTicket.
 
-### 1. WSL / Ubuntu Environment
+---
 
-Configured **WSL 2 with Ubuntu** to provide the Linux environment used for the Service Desk lab.
+## 1.1 Docker Version Verification
 
-### 2. Docker Environment
+The Docker installation was verified from the Windows environment to confirm that Docker was available and functioning correctly.
 
-Configured Docker to run the required containers for the Service Desk environment.
+![Docker Version](screenshots/setup/01-docker-version.png)
 
-### 3. MariaDB Database
+---
 
-Configured MariaDB as the database backend for osTicket.
+## 1.2 Docker Hello World Test
 
-### 4. osTicket Installation
+A Docker Hello World container was executed to verify that Docker could successfully create and run containers.
 
-Deployed **osTicket 1.18.4** and connected it to the MariaDB database.
+![Docker Hello World](screenshots/setup/02-docker-hello-world.png)
 
-### 5. Initial System Verification
+---
 
-Verified that osTicket was successfully deployed and accessible through the web interface.
+## 1.3 Docker Compose Configuration
 
-## Phase 1 Screenshots
+The Docker Compose configuration was created to define the services required for the osTicket environment, including the application and database.
 
-The Phase 1 setup screenshots are stored in:
+![Docker Compose Configuration](screenshots/setup/03-docker-compose-configuration.png)
 
-```text
-screenshots/setup/
-```
+---
 
-These screenshots document the environment setup, Docker deployment, database configuration, and working osTicket installation.
+## 1.4 Containers Running
+
+The running containers were verified to ensure that the osTicket and MariaDB services were successfully deployed.
+
+![Containers Running](screenshots/setup/04-containers-running.png)
+
+---
+
+## 1.5 osTicket Dashboard
+
+The osTicket dashboard was accessed successfully, confirming that the Service Desk application was installed and operational.
+
+![osTicket Dashboard](screenshots/setup/05-osticket-dashboard.png)
 
 ---
 
@@ -85,102 +124,66 @@ These screenshots document the environment setup, Docker deployment, database co
 
 Configure osTicket to simulate a realistic corporate IT Service Desk environment.
 
----
-
-## 2.1 System Configuration
-
-Configured the basic osTicket system settings required for the Service Desk environment.
-
-This included system identity, ticket settings, email configuration, and general help desk options.
+This phase includes system settings, departments, Help Topics, support staff, and test users.
 
 ---
 
-## 2.2 Departments
+## 2.1 Admin System Settings
 
-Created departments to organize incoming IT support requests.
+The osTicket administration settings were configured to establish the basic Service Desk environment and ticket management behavior.
 
-Example departments:
-
-* IT Support
-* System Administration
-
-Departments allow tickets to be routed to the appropriate support team.
+![Admin System Settings](screenshots/admin-config/06-admin-system-settings.png)
 
 ---
 
-## 2.3 Help Topics
+## 2.2 Departments Configured
 
-Created Help Topics to categorize common Service Desk incidents.
+IT Support departments were configured to organize and route incidents to the appropriate support team.
 
-Examples:
-
-* Microsoft 365 / Email
-* Password Reset
-* Network / VPN
-* Hardware
-* Software
-
-Help Topics help agents classify and route incoming incidents efficiently.
+![Departments Configured](screenshots/admin-config/07-departments-configured.png)
 
 ---
 
-## 2.4 Staff / Agents
+## 2.3 Help Topics Configured
 
-Created Service Desk staff accounts and configured their department assignments.
+Help Topics were configured to categorize common Service Desk requests and make ticket classification easier.
 
-This demonstrates basic IT support team administration and role-based access.
-
----
-
-## 2.5 Priorities & SLA
-
-Configured ticket priorities and Service Level Agreement expectations.
-
-Example priorities:
-
-* Low
-* Normal
-* High
-* Emergency
-
-This demonstrates how incidents can be prioritized according to urgency and business impact.
+![Help Topics Configured](screenshots/admin-config/08-help-topics-configured.png)
 
 ---
 
-## 2.6 Test Users
+## 2.4 IT Support Team
 
-Created test customer accounts to simulate employees submitting IT support requests.
+IT Support staff/agents were configured so incidents could be assigned to the appropriate Service Desk personnel.
 
-For Ticket 01, the test customer is:
-
-**Tony Stark**
+![IT Support Team](screenshots/admin-config/09-it-support-team.png)
 
 ---
 
-## Phase 2 Screenshots
+## 2.5 Test User Created
 
-The Phase 2 configuration screenshots are stored in:
+A test customer account was created to simulate an employee submitting an IT support request.
 
-```text
-screenshots/admin-config/
-```
+This user is used in Phase 3 for the Microsoft 365 incident scenario.
 
-These screenshots document the configuration of departments, Help Topics, staff/agents, priorities, SLA settings, and test users.
+![Test User Created](screenshots/admin-config/10-test-user-created.png)
 
 ---
 
-# Phase 3 — Incident Management & Ticket Scenarios
+# Phase 3 — Incident Management
 
 ## Objective
 
-Simulate realistic Level 1 Service Desk incidents from initial ticket creation through investigation, troubleshooting, customer communication, resolution, and closure.
+Simulate realistic Level 1 IT Service Desk incidents using the configured osTicket environment.
 
-Each incident follows a structured Service Desk workflow:
+Each ticket follows a complete incident lifecycle:
 
 ```text
+User / Customer
+      ↓
 Ticket Creation
       ↓
-Classification
+Categorization
       ↓
 Prioritization
       ↓
@@ -192,9 +195,9 @@ Customer Communication
       ↓
 Resolution
       ↓
-Ticket Closure
+Confirmation
       ↓
-Documentation
+Ticket Closure
 ```
 
 ---
@@ -207,7 +210,7 @@ Documentation
 
 ## Issue
 
-Tony Stark reported that he was unable to sign in to his Microsoft 365 account.
+Tony Stark reported an issue accessing his Microsoft 365 account.
 
 ## Category
 
@@ -219,150 +222,135 @@ Tony Stark reported that he was unable to sign in to his Microsoft 365 account.
 
 ## Incident Type
 
-**User Authentication / Account Access**
+**Account Access / Authentication**
 
 ---
 
 ## Incident Summary
 
-Tony Stark contacted the IT Service Desk after experiencing a Microsoft 365 login problem.
+Tony Stark contacted the IT Service Desk after experiencing a Microsoft 365 login issue.
 
-The Service Desk agent documented the incident, investigated the account, performed troubleshooting, communicated with the customer, documented the resolution, and closed the ticket after the issue was resolved.
-
----
-
-# 🔧 Ticket 01 Troubleshooting Process
-
-### 1. Ticket Submission
-
-The customer submitted a Service Desk ticket reporting the Microsoft 365 login problem.
-
-The incident was recorded in osTicket and assigned to the appropriate IT Support team.
-
-### 2. Ticket Investigation
-
-The support agent reviewed the ticket details and investigated the user's account and authentication issue.
-
-### 3. Internal Troubleshooting
-
-The agent documented troubleshooting activities using an internal note so the investigation was recorded for the IT Support team.
-
-### 4. Customer Communication
-
-The customer was updated regarding the troubleshooting process and asked to test Microsoft 365 access again.
-
-### 5. Resolution
-
-The Microsoft 365 login issue was resolved and the customer was able to access the service successfully.
-
-### 6. Ticket Closure
-
-After confirming the resolution with the customer, the ticket was closed and the incident lifecycle was completed.
+The Service Desk agent created and categorized the incident, investigated the problem, documented troubleshooting actions, communicated with the customer, recorded the resolution, and closed the ticket after the issue was resolved.
 
 ---
 
-# 📸 Ticket 01 Evidence
+# Ticket 01 — Evidence
 
-All Ticket 01 evidence is stored in:
+All Ticket 01 screenshots are stored in:
 
 ```text
-tickets/
-└── ticket-01-microsoft-365-login/
-```
-
----
-
-## Screenshot 01 — User Creation
-
-**File:** `Phase3_Ticket01_User_Creation.png`
-
-Shows the creation of **Tony Stark** as the test customer used for the Microsoft 365 incident scenario.
-
-![Ticket 01 - User Creation](tickets/ticket-01-microsoft-365-login/Phase3_Ticket01_User_Creation.png)
-
----
-
-## Screenshot 02 — Ticket Created
-
-**File:** `Phase3_Ticket01_Created.png`
-
-Shows the Microsoft 365 login issue being submitted as a new Service Desk ticket for Tony Stark.
-
-![Ticket 01 - Created](tickets/ticket-01-microsoft-365-login/Phase3_Ticket01_Created.png)
-
----
-
-## Screenshot 03 — Internal Troubleshooting
-
-**File:** `Phase3_Ticket01_Internal_Note.png`
-
-Shows the IT Support agent documenting internal troubleshooting activities and investigation steps.
-
-![Ticket 01 - Internal Troubleshooting](tickets/ticket-01-microsoft-365-login/Phase3_Ticket01_Internal_Note.png)
-
----
-
-## Screenshot 04 — Customer Communication
-
-**File:** `Phase3_Ticket01_Customer_Reply.png`
-
-Shows communication with Tony Stark during the troubleshooting process and keeps the customer informed about the incident.
-
-![Ticket 01 - Customer Communication](tickets/ticket-01-microsoft-365-login/Phase3_Ticket01_Customer_Reply.png)
-
----
-
-## Screenshot 05 — Resolution
-
-**File:** `Phase3_Ticket01_Resolution.png`
-
-Shows the documented resolution of the Microsoft 365 login issue after troubleshooting was completed.
-
-![Ticket 01 - Resolution](tickets/ticket-01-microsoft-365-login/Phase3_Ticket01_Resolution.png)
-
----
-
-## Screenshot 06 — Ticket Closed
-
-**File:** `Phase3_Ticket01_Closed.png`
-
-Shows the completed ticket after the resolution was confirmed and the incident was formally closed.
-
-![Ticket 01 - Ticket Closed](tickets/ticket-01-microsoft-365-login/Phase3_Ticket01_Closed.png)
-
----
-
-# 📂 Project Structure
-
-```text
-IT-Service-Desk-Incident-Management-Lab/
-│
-├── README.md
-├── .gitignore
-│
-├── screenshots/
-│   │
-│   ├── setup/
-│   │
-│   └── admin-config/
-│
+screenshots/
 └── tickets/
-    │
     └── ticket-01-microsoft-365-login/
-        │
-        ├── Phase3_Ticket01_User_Creation.png
-        ├── Phase3_Ticket01_Created.png
-        ├── Phase3_Ticket01_Internal_Note.png
-        ├── Phase3_Ticket01_Customer_Reply.png
-        ├── Phase3_Ticket01_Resolution.png
-        └── Phase3_Ticket01_Closed.png
 ```
+
+---
+
+## 3.1 User Creation
+
+**Screenshot:** `Phase3_Ticket01_User_Creation.png`
+
+Tony Stark was created as the test customer who would be used to simulate the Microsoft 365 support incident.
+
+![Ticket 01 - User Creation](screenshots/tickets/ticket-01-microsoft-365-login/Phase3_Ticket01_User_Creation.png)
+
+---
+
+## 3.2 Ticket Created
+
+**Screenshot:** `Phase3_Ticket01_Created.png`
+
+The Microsoft 365 login issue was submitted as a new Service Desk ticket and recorded in osTicket.
+
+![Ticket 01 - Created](screenshots/tickets/ticket-01-microsoft-365-login/Phase3_Ticket01_Created.png)
+
+---
+
+## 3.3 Internal Troubleshooting
+
+**Screenshot:** `Phase3_Ticket01_Internal_Note.png`
+
+An internal note was added to document the troubleshooting and investigation performed by the IT Support agent.
+
+![Ticket 01 - Internal Note](screenshots/tickets/ticket-01-microsoft-365-login/Phase3_Ticket01_Internal_Note.png)
+
+---
+
+## 3.4 Customer Reply
+
+**Screenshot:** `Phase3_Ticket01_Customer_Reply.png`
+
+The customer was updated during the troubleshooting process and provided with information regarding the status of the incident.
+
+![Ticket 01 - Customer Reply](screenshots/tickets/ticket-01-microsoft-365-login/Phase3_Ticket01_Customer_Reply.png)
+
+---
+
+## 3.5 Resolution
+
+**Screenshot:** `Phase3_Ticket01_Resolution.png`
+
+The resolution was documented after troubleshooting was completed and the Microsoft 365 access issue was resolved.
+
+![Ticket 01 - Resolution](screenshots/tickets/ticket-01-microsoft-365-login/Phase3_Ticket01_Resolution.png)
+
+---
+
+## 3.6 Ticket Closed
+
+**Screenshot:** `Phase3_Ticket01_Closed.png`
+
+The incident was closed after the resolution was confirmed, completing the Service Desk ticket lifecycle.
+
+![Ticket 01 - Closed](screenshots/tickets/ticket-01-microsoft-365-login/Phase3_Ticket01_Closed.png)
+
+---
+
+# 🔧 Incident Management Process Demonstrated
+
+Ticket 01 demonstrates the following Service Desk activities:
+
+### 1. User Identification
+
+Identified the customer experiencing the issue and verified the associated support request.
+
+### 2. Ticket Creation
+
+Created a formal incident ticket containing the customer's issue and relevant details.
+
+### 3. Classification
+
+Categorized the incident under the appropriate Microsoft 365 / Email Help Topic.
+
+### 4. Prioritization
+
+Assigned an appropriate priority based on the impact and urgency of the access issue.
+
+### 5. Investigation
+
+Reviewed the ticket and investigated the reported Microsoft 365 authentication problem.
+
+### 6. Internal Documentation
+
+Recorded troubleshooting actions using an internal ticket note.
+
+### 7. Customer Communication
+
+Communicated with the customer throughout the troubleshooting process.
+
+### 8. Resolution
+
+Documented the successful resolution after troubleshooting was completed.
+
+### 9. Closure
+
+Closed the ticket after confirming that the incident had been resolved.
 
 ---
 
 # 🧰 Skills Demonstrated
 
-## Service Desk
+## Service Desk Skills
 
 * Incident Management
 * Ticket Lifecycle Management
@@ -374,7 +362,7 @@ IT-Service-Desk-Incident-Management-Lab/
 * Incident Resolution
 * Ticket Closure
 
-## Technical Support
+## Technical Support Skills
 
 * Microsoft 365 troubleshooting
 * User account troubleshooting
@@ -387,21 +375,21 @@ IT-Service-Desk-Incident-Management-Lab/
 ## IT Administration
 
 * osTicket administration
-* Department management
-* Staff/agent management
+* Department configuration
 * Help Topic configuration
+* Staff/Agent configuration
 * Priority configuration
 * SLA configuration
 * Test user creation
 
 ## Tools & Technologies
 
-* osTicket
+* osTicket 1.18.4
 * Docker
 * Docker Compose
 * WSL 2
 * Ubuntu
-* MariaDB
+* MariaDB 10.11
 * PowerShell
 * Git
 * GitHub
@@ -410,20 +398,31 @@ IT-Service-Desk-Incident-Management-Lab/
 
 # 🔄 Real-World Service Desk Workflow
 
-This project demonstrates the workflow commonly used by Level 1 IT Support and Service Desk teams:
+This project follows a practical Level 1 IT Service Desk workflow:
 
-1. Receive user incident
-2. Create and document ticket
-3. Identify affected service
-4. Categorize the incident
-5. Assign priority
-6. Investigate the issue
-7. Perform troubleshooting
-8. Document internal actions
-9. Communicate with the user
-10. Apply or recommend a resolution
-11. Confirm the issue is resolved
-12. Close and document the ticket
+```text
+Receive Incident
+       ↓
+Create Ticket
+       ↓
+Categorize
+       ↓
+Prioritize
+       ↓
+Investigate
+       ↓
+Troubleshoot
+       ↓
+Document Actions
+       ↓
+Communicate With User
+       ↓
+Resolve
+       ↓
+Confirm Resolution
+       ↓
+Close Ticket
+```
 
 ---
 
@@ -433,14 +432,25 @@ Additional realistic Service Desk incidents will be added to Phase 3.
 
 Planned scenarios include:
 
-* Password reset
-* VPN connectivity issue
-* Windows workstation issue
-* Software installation problem
-* Network connectivity issue
-* Printer troubleshooting
+* **Ticket 02 — Password Reset**
+* **Ticket 03 — VPN Connectivity Issue**
+* **Ticket 04 — Windows Workstation Issue**
+* **Ticket 05 — Software Installation Issue**
+* **Ticket 06 — Network Connectivity Issue**
 
-Each ticket will follow the same structured incident management lifecycle and include supporting screenshots and documentation.
+Each ticket will include:
+
+* Customer/user
+* Incident description
+* Category
+* Priority
+* Investigation
+* Internal notes
+* Customer communication
+* Troubleshooting
+* Resolution
+* Closure
+* Screenshot evidence
 
 ---
 
@@ -451,7 +461,7 @@ Each ticket will follow the same structured incident management lifecycle and in
 | Phase 1 — Environment Setup      | ✅ Completed |
 | Phase 2 — osTicket Configuration | ✅ Completed |
 | Phase 3 — Ticket 01              | ✅ Completed |
-| Phase 3 — Additional Tickets     | 🔄 Planned  |
+| Phase 3 — Tickets 02–06          | 🔄 Planned  |
 
 ---
 
@@ -459,13 +469,14 @@ Each ticket will follow the same structured incident management lifecycle and in
 
 This project was created as a practical IT Service Desk portfolio project to demonstrate hands-on experience with:
 
+* Service Desk operations
 * Incident management
 * Technical troubleshooting
 * Customer support
 * Ticket documentation
 * User administration
-* IT Service Desk operations
-* Problem resolution
+* Incident resolution
 * Ticket lifecycle management
+* IT support processes
 
-The project is designed to reflect the responsibilities and workflow of a **Level 1 Service Desk Analyst / IT Support Technician** in a real-world environment.
+The lab is designed to demonstrate the practical skills expected from a **Level 1 Service Desk Analyst / IT Support Technician**.
