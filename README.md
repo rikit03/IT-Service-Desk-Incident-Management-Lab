@@ -601,9 +601,6 @@ IT-Service-Desk-Incident-Management-Lab/
 └── .gitignore
 ```
 
-```
-
-
 ---
 
 # 🔐 Security
